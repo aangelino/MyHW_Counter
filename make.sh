@@ -1,3 +1,3 @@
 mbed deploy
 
-mbed compile -m NUCLEO_L432KC -t GCC_ARM 
+mbed compile -m NUCLEO_F401RE -t GCC_ARM 
