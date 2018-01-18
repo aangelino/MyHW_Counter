@@ -78,15 +78,16 @@ void HAL_MspInit(void)
 void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 {
 
-  printf("\n\rHAL_TIM_Base_MspInit \r\n");
   GPIO_InitTypeDef GPIO_InitStruct;
   if(htim_base->Instance==TIM1)
   {
+    printf("\n\rHAL_TIM_Base_MspInit tim1\r\n");
   /* USER CODE BEGIN TIM1_MspInit 0 */
 
   /* USER CODE END TIM1_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_TIM1_CLK_ENABLE();
+
 
     /**TIM1 GPIO Configuration
     PA8     ------> TIM1_CH1
@@ -105,6 +106,15 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
   /* USER CODE END TIM1_MspInit 1 */
   }
 
+  if(htim_base->Instance==TIM2)
+  {
+    printf("\n\rHAL_TIM_Base_MspInit tim2\r\n");
+  /* USER CODE BEGIN TIM1_MspInit 0 */
+
+  /* USER CODE END TIM1_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_TIM2_CLK_ENABLE();
+  }
 }
 
 void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
